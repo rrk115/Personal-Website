@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<style>
+    
+		.box{
+  width: 450px;
+ background-color:rgba(192,192,192,0.4);
+  padding: 40px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 20%;
+  color: white;
+  font-family: 'Century Gothic',sans-serif;
+   border: 15px solid green;
+  box-shadow: 10px 10px 10px black;
+}
+.box-img{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.rate {
+    float: center;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+  </style>
+
+<body style="background-color:#42455a;">
+<div class="box">
+	<img src="http://www.cen.eu/news/brief-news/PublishingImages/BusinessMenTalk_Feedback-bubble_Copyright-BoBaa22_shutterstock_190537427.jpg" alt="" class="box-img">
+	<head><h1><u><center>Feedback</center></u></h1></head>
+	 <center><body>
+<h2>Please provide your feedback form :</h2>
+
+<p>How do you rate your overall experience ?</p>
+<label>Bad</label> <input type="radio" name="Exp">&emsp;
+<label>Average</label> <input type="radio" name="Exp">&emsp;
+<label>Good</label> <input type="radio" name="Exp">&emsp;
+<label>Verygood</label> <input type="radio" name="Exp">
+<br><br>
+<label>Comments:</label> <textarea cols="25" rows="4"></textarea><br><br>
+<label>Name:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&thinsp;&thinsp;&thinsp;<label>Email:</label><br> 
+<input type="text">&emsp;<input type="text"><br><br>
+	<p>Rate my Website :</p>
+	<div class="rate">
+    <input type="radio" id="star5" name="rate" value="5" />
+    <label for="star5" title="text">5 stars</label>
+    <input type="radio" id="star4" name="rate" value="4" />
+    <label for="star4" title="text">4 stars</label>
+    <input type="radio" id="star3" name="rate" value="3" />
+    <label for="star3" title="text">3 stars</label>
+    <input type="radio" id="star2" name="rate" value="2" />
+    <label for="star2" title="text">2 stars</label>
+    <input type="radio" id="star1" name="rate" value="1" />
+    <label for="star1" title="text">1 star</label>
+  </div>
+ 
+  <button type="submit">POST</button>
+  </body></center>
+</div>
+  
+</html>
